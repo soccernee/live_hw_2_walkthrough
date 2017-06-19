@@ -1,0 +1,8 @@
+<h1>Welcome!</h1>
+
+<% if current_user.present? %>
+  Welcome <%= current_user.name %> to SimpleChat!
+<% else %>
+  <%= link_to "Sign Up", new_user_path, class: "btn btn-primary" %>
+  <%= link_to "Sign In", new_session_path, class: "btn btn-primary" %>
+<% end %>

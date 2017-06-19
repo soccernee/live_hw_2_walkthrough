@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   delete 'log_out' => 'sessions#destroy'
 
-
+  resources :messages
 
   root 'home#index'
 end

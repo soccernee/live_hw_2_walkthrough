@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome #{@user.name}"
       redirect_to root_path
     else
+      flash[:error] = "Password did not match!"
       render 'new'
     end
   end
